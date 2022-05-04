@@ -1,0 +1,15 @@
+node {
+   stage('Clone') {
+       
+       git 'https://github.com/khadijaELyahyaoui/jenkins-helloworld.git'
+  
+    }
+    stage('Bluid') {
+        sh 'javac Main.java'
+      
+    }
+    stage('Run') {
+          sh 'java Main'
+    }
+
+}
